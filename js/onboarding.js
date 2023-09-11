@@ -18,9 +18,8 @@ $(document).ready(function(){
     setProgressBar(current);
     
     $(".next").click(function(){
-    
-    current_fs = $(this).parent();
-    next_fs = $(this).parent().next();
+    current_fs = $(this).closest('.fieldset');
+    next_fs = current_fs.next();
     
     
     //show the next fieldset
@@ -35,7 +34,7 @@ $(document).ready(function(){
     'display': 'none',
     'position': 'relative'
     });
-    next_fs.css({'opacity': opacity});
+    next_fs.css({'opacity': opacity, 'display': 'grid'});
     },
     duration: 500
     });
@@ -44,8 +43,8 @@ $(document).ready(function(){
     
     $(".previous").click(function(){
     
-    current_fs = $(this).parent();
-    previous_fs = $(this).parent().prev();
+    current_fs = $(this).closest('.fieldset');
+    previous_fs = current_fs.prev();
     
     
     //show the previous fieldset
@@ -61,7 +60,7 @@ $(document).ready(function(){
     'display': 'none',
     'position': 'relative'
     });
-    previous_fs.css({'opacity': opacity});
+    previous_fs.css({'opacity': opacity, 'display': 'grid'});
     },
     duration: 500
     });
