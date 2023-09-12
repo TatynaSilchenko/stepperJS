@@ -18,9 +18,22 @@ $(document).ready(function(){
     setProgressBar(current);
     
     $(".next").click(function(){
-    current_fs = $(this).closest('.fieldset');
-    next_fs = current_fs.next();
+
+    current_fs = $('.formFieldset-wrapper__main-info .fieldset.active');
+    let current_fs__id = current_fs.attr('id');
+    let [ numberID, subStepNumber, nextStep ] = checkID(current_fs__id);
+
     
+    // next_fs = current_fs.next();
+    next_fs =  $(`#${nextStep}`);
+
+
+    // let next_fs__id = next_fs.attr('id');
+    current_fs.removeClass('active');
+   
+    checkIsPreviousStep(nextStep);
+  
+    next_fs.addClass('active');
     
     //show the next fieldset
     next_fs.show();
@@ -43,8 +56,16 @@ $(document).ready(function(){
     
     $(".previous").click(function(){
     
-    current_fs = $(this).closest('.fieldset');
-    previous_fs = current_fs.prev();
+    current_fs = $('.formFieldset-wrapper__main-info .fieldset.active');
+    let current_fs__id = current_fs.attr('id');
+
+    let [ numberID, subStepNumber, nextStep ] = checkID(current_fs__id, true);
+
+    previous_fs = $(`#${nextStep}`);
+
+    current_fs.removeClass('active');
+    checkIsPreviousStep(nextStep);
+    previous_fs.addClass('active');
     
     
     //show the previous fieldset
@@ -66,6 +87,11 @@ $(document).ready(function(){
     });
     setProgressBar(--current);
     });
+
+    $("#startStepper").click(function(){
+      $("#onboarding").hide();
+      $("#onboardingCalc").show();
+    })
     
     function setProgressBar(curStep){
     let percent = parseFloat(100 / steps) * curStep;
@@ -77,5 +103,26 @@ $(document).ready(function(){
     $(".submit").click(function(){
     return false;
     })
+
+    const checkIsPreviousStep = (id) => {
+         (id !== "step1") 
+       ? $("#prevBtn").css("display",'flex')
+       : $("#prevBtn").hide()
+    }
+
+    const checkID = (id, isPrev = false) => {
+      let subStepNumber;
+      let nextStep;
+      let parts = id.split("_");
+      let numberID =  parts[0].replace("step", "");
+
+      nextStep = isPrev ? 'step' + (+numberID - 1) :'step' + (+numberID + 1);
+     
+      if (parts.length > 1) {
+        subStepNumber = parts[1];
+      }
+
+      return [numberID, subStepNumber, nextStep];
+    }
     
-    });
+    })
