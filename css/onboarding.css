@@ -345,7 +345,7 @@ label .checkbox__info__add-info {
 }
 .fieldset__payment__tags {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 56px;
 }
@@ -802,4 +802,8 @@ h1 {
   height: 32px;
   display: inline-block;
   background: url("/media/formstepper/common-icons/Arrow-next.svg");
+}
+
+body {
+  padding: 0 calc(20px - (100vw - 100%)) 0 0;
 }/*# sourceMappingURL=onboarding.css.map */

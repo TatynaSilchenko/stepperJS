@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="fonts/fonts.css">
 </head>
 <body>
+
     <div class="onboarding pl-site main-banner" id="onboarding">
         <div class="section-container">
             <div class="main__flex-line">
@@ -44,19 +45,19 @@
                             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                         </div> 
                         <div class="formFieldset-wrapper">
-
                             <div class="formFieldset-wrapper__main-info">
-                        <fieldset id="step1" class="fieldset active">
+                              
+                        <fieldset id="step1" class="fieldset top-fieldset active">
                                  <div class="form-card">
                                         <label class="radius">
-                                            <input type="radio" name="industry" id="education" checked/>
+                                            <input type="radio" name="industry" id="education" value="Education" checked />
                                             
                                             <span> 
                                                 <span class="radio-img"></span>
                                                 <img src="/media/formstepper/icons-step1/EdTech.svg" alt="Education">Education</span>
                                         </label>
                                         <label class="radius">
-                                            <input type="radio" name="industry" id="ai"/>
+                                            <input type="radio" name="industry" id="ai" value="Ai"/>
                                             
                                             <span>
                                                 <span class="radio-img"></span>
@@ -65,7 +66,7 @@
                                             </span>
                                         </label>
                                         <label class="radius">
-                                            <input type="radio" name="industry" id="Web3"/>
+                                            <input type="radio" name="industry" id="Web3" value="Web3"/>
                                             
                                             <span >
                                                 <span class="radio-img"></span>
@@ -73,7 +74,7 @@
                                                 Web3</span>
                                         </label>
                                         <label class="radius">
-                                            <input type="radio" name="industry" id="fintech"/>
+                                            <input type="radio" name="industry" id="fintech" value="Fintech"/>
                                             
                                             <span >
                                                 <span class="radio-img"></span>
@@ -81,7 +82,7 @@
                                                 Fintech</span>
                                         </label>
                                         <label class="radius">
-                                            <input type="radio" name="industry" id="healthcare"/>
+                                            <input type="radio" name="industry" id="healthcare" value="Healthcare"/>
                                             
                                             <span >
                                                 <span class="radio-img"></span>
@@ -89,7 +90,7 @@
                                                 Healthcare</span>
                                         </label>
                                         <label class="radius">
-                                            <input type="radio" name="industry" id="eCommerce"/>
+                                            <input type="radio" name="industry" id="eCommerce" value="eCommerce"/>
                                        
                                             <span >
                                                 <span class="radio-img"></span>
@@ -97,7 +98,7 @@
                                                 eCommerce</span>
                                         </label>
                                         <label class="radius"> 
-                                            <input type="radio" name="industry" id="other1"/>
+                                            <input type="radio" name="industry" id="other1" value="Industry"/>
                                        
                                             <span >
                                                 <span class="radio-img"></span>
@@ -105,17 +106,17 @@
                                         </label>
                                  </div>
                         </fieldset>
-                        <fieldset  id="step2" class="fieldset">
+                        <fieldset  id="step2" class="fieldset top-fieldset">
                                 <div class="form-card">
                                        <label class="radius">
-                                           <input type="radio" name="productVersion" id="productDesign" checked/>
+                                           <input type="radio" name="productVersion" id="productDesign" value="Product design" checked/>
                                            <span> 
                                                <span class="radio-img"></span>
                                                Product design
                                             </span>
                                        </label>
                                        <label class="radius">
-                                           <input type="radio" name="productVersion" id="functionalPrototype"/>
+                                           <input type="radio" name="productVersion" id="functionalPrototype" value="Functional prototype" />
                                            
                                            <span>
                                                <span class="radio-img"></span>
@@ -123,7 +124,7 @@
                                            </span>
                                        </label>
                                        <label class="radius">
-                                           <input type="radio" name="productVersion" id="mvp"/>
+                                           <input type="radio" name="productVersion" id="mvp" value="MVP" />
                                            
                                            <span >
                                                <span class="radio-img"></span>
@@ -131,7 +132,7 @@
                                             </span>
                                        </label>
                                        <label class="radius">
-                                           <input type="radio" name="productVersion" id="frVersion"/>
+                                           <input type="radio" name="productVersion" id="frVersion" value="Full-released version"/>
                                            
                                            <span >
                                                <span class="radio-img"></span>
@@ -139,7 +140,7 @@
                                             </span>
                                        </label>
                                        <label class="radius">
-                                           <input type="radio" name="productVersion" id="other2"/> 
+                                           <input type="radio" name="productVersion" id="other2" value="Design" /> 
                                            <span >
                                                <span class="radio-img"></span>
                                                Other
@@ -147,10 +148,10 @@
                                        </label>
                                 </div>
                         </fieldset>
-                        <fieldset id="step3" class="fieldset">
+                        <fieldset id="step3" class="fieldset top-fieldset">
                                 <div class="form-card">
                                         <label for="iosCheck" class="checkbox radius">
-                                          <input class="checkbox__input" type="checkbox" id="iosCheck">
+                                          <input class="checkbox__input" type="checkbox" id="iosCheck" value="IOS" >
                                           <span>
                                           <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -167,7 +168,7 @@
                                         </label>
 
                                         <label for="androidCheck" class="checkbox radius">
-                                            <input class="checkbox__input" type="checkbox" id="androidCheck">
+                                            <input class="checkbox__input" type="checkbox" id="androidCheck" value="Android">
                                             <span>
                                             <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                               <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -183,7 +184,7 @@
                                         </span>
                                           </label>
                                           <label for="webCheck" class="checkbox radius">
-                                            <input class="checkbox__input" type="checkbox" id="webCheck">
+                                            <input class="checkbox__input" type="checkbox" id="webCheck" value="Web">
                                             <span>
                                             <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                               <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -200,7 +201,7 @@
                                         </span>
                                           </label>
                                           <label for="tabCheck" class="checkbox radius">
-                                            <input class="checkbox__input" type="checkbox" id="tabCheck">
+                                            <input class="checkbox__input" type="checkbox" id="tabCheck" value="Tablet App">
                                             <span>
                                             <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                               <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -216,10 +217,10 @@
                                             </span>
                                           </label>
                         </fieldset>
-                        <fieldset id="step4" class="fieldset">
+                        <fieldset id="step4" class="fieldset top-fieldset">
                             <div class="form-card">
                                     <label for="emailCheck" class="checkbox radius">
-                                      <input class="checkbox__input" type="checkbox" id="emailCheck">
+                                      <input class="checkbox__input" type="checkbox" id="emailCheck" value="E-mail">
                                       <span>
                                       <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -236,7 +237,7 @@
                                     </label>
 
                                     <label for="phoneNumberCheck" class="checkbox radius">
-                                        <input class="checkbox__input" type="checkbox" id="phoneNumberCheck">
+                                        <input class="checkbox__input" type="checkbox" id="phoneNumberCheck" value="Phone number">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -252,7 +253,7 @@
                                     </span>
                                       </label>
                                       <label for="socialNetworksCheck" class="checkbox radius">
-                                        <input class="checkbox__input" type="checkbox" id="socialNetworksCheck">
+                                        <input class="checkbox__input" type="checkbox" id="socialNetworksCheck" value="Social networks">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -269,7 +270,7 @@
                                     </span>
                                       </label>
                                       <label for="web3Check" class="checkbox radius">
-                                        <input class="checkbox__input" type="checkbox" id="web3Check">
+                                        <input class="checkbox__input" type="checkbox" id="web3Check" value="Wallet-based (Web3)">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -285,10 +286,10 @@
                                         </span>
                                       </label>
                          </fieldset>
-                         <fieldset id="step5" class="fieldset">
+                         <fieldset id="step5" class="fieldset top-fieldset">
                             <div class="form-card">
                                     <label for="stockOrTemplateCheck" class="checkbox radius">
-                                      <input class="checkbox__input" type="checkbox" id="stockOrTemplateCheck">
+                                      <input class="checkbox__input" type="checkbox" id="stockOrTemplateCheck" value="Stock or Template">
                                       <span>
                                       <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -304,7 +305,7 @@
                                     </label>
 
                                     <label for="customBrandedCheck" class="checkbox radius">
-                                        <input class="checkbox__input" type="checkbox" id="customBrandedCheck">
+                                        <input class="checkbox__input" type="checkbox" id="customBrandedCheck" value="Custom Branded">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -319,7 +320,7 @@
                                     </span>
                                       </label>
                                       <label for="customWithAnimations" class="checkbox radius">
-                                        <input class="checkbox__input" type="checkbox" id="customWithAnimations">
+                                        <input class="checkbox__input" type="checkbox" id="customWithAnimations" value="Custom with animations">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -334,7 +335,7 @@
                                     </span>
                                       </label>
                                       <label for="ownDesign" class="checkbox radius">
-                                        <input class="checkbox__input" type="checkbox" id="ownDesign">
+                                        <input class="checkbox__input" type="checkbox" id="ownDesign" value="I have my own design">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -349,10 +350,10 @@
                                         </span>
                                       </label>
                          </fieldset>
-                         <fieldset id="step6" class="fieldset">
+                         <fieldset id="step6" class="fieldset top-fieldset" >
                             <div class="form-card">
                                     <label for="crmCheck" class="checkbox radius">
-                                      <input class="checkbox__input" type="checkbox" id="crmCheck">
+                                      <input class="checkbox__input" type="checkbox" id="crmCheck" value="CRM ( Salesforce, HubSpot, Zoho etc.)">
                                       <span>
                                       <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -368,7 +369,7 @@
                                     </label>
 
                                     <label for="analyticsCheck" class="checkbox radius">
-                                        <input class="checkbox__input" type="checkbox" id="analyticsCheck">
+                                        <input class="checkbox__input" type="checkbox" id="analyticsCheck" value="Analytics (Google Analytics, Tableau, Power BI etc.)">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -383,7 +384,7 @@
                                     </span>
                                       </label>
                                       <label for="erpCheck" class="checkbox radius">
-                                        <input class="checkbox__input" type="checkbox" id="erpCheck">
+                                        <input class="checkbox__input" type="checkbox" id="erpCheck" value=" ERP (Accounting, commerce)">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -398,7 +399,7 @@
                                     </span>
                                       </label>
                                       <label for="metaCheck" class="checkbox radius">
-                                        <input class="checkbox__input" type="checkbox" id="metaCheck">
+                                        <input class="checkbox__input" type="checkbox" id="metaCheck" value="Meta, LinkedIn (ads)">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -413,7 +414,7 @@
                                         </span>
                                       </label>
                                       <label for="noCheck" class="checkbox radius">
-                                        <input class="checkbox__input" type="checkbox" id="noCheck">
+                                        <input class="checkbox__input" type="checkbox" id="noCheck" value="No Integration">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -428,7 +429,7 @@
                                         </span>
                                       </label>
                                       <label for="other6Check" class="checkbox radius">
-                                        <input class="checkbox__input" type="checkbox" id="other6Check">
+                                        <input class="checkbox__input" type="checkbox" id="other6Check" value="API Integration">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -443,17 +444,17 @@
                                         </span>
                                       </label>
                          </fieldset>
-                         <fieldset  id="step7" class="fieldset">
+                         <fieldset  id="step7" class="fieldset top-fieldset">
                             <div class="form-card">
                                    <label class="radius">
-                                       <input type="radio" name="administrativePanel" id="wordpressAdmin" checked/>
+                                       <input type="radio" name="administrativePanel" id="wordpressAdmin" checked value="WordPress"/>
                                        <span> 
                                            <span class="radio-img"></span>
                                            WordPress
                                         </span>
                                    </label>
                                    <label class="radius">
-                                       <input type="radio" name="administrativePanel" id="drupalAdmin"/>
+                                       <input type="radio" name="administrativePanel" id="drupalAdmin" value="Drupal"/>
                                        
                                        <span>
                                            <span class="radio-img"></span>
@@ -461,7 +462,7 @@
                                        </span>
                                    </label>
                                    <label class="radius">
-                                       <input type="radio" name="administrativePanel" id="magentoAdmin"/>
+                                       <input type="radio" name="administrativePanel" id="magentoAdmin" value="Magento"/>
                                        
                                        <span >
                                            <span class="radio-img"></span>
@@ -469,7 +470,7 @@
                                         </span>
                                    </label>
                                    <label class="radius">
-                                       <input type="radio" name="administrativePanel" id="shopifyAdmin"/>
+                                       <input type="radio" name="administrativePanel" id="shopifyAdmin" value="Shopify"/>
                                        
                                        <span >
                                            <span class="radio-img"></span>
@@ -477,28 +478,28 @@
                                         </span>
                                    </label>
                                    <label class="radius">
-                                       <input type="radio" name="administrativePanel" id="wooCommerceAdmin"/> 
+                                       <input type="radio" name="administrativePanel" id="wooCommerceAdmin" value="WooCommerce"/> 
                                        <span >
                                            <span class="radio-img"></span>
                                            WooCommerce
                                         </span>
                                    </label>
                                    <label class="radius">
-                                    <input type="radio" name="administrativePanel" id="bigCommerceAdmin"/> 
+                                    <input type="radio" name="administrativePanel" id="bigCommerceAdmin" value="BigCommerce"/> 
                                     <span >
                                         <span class="radio-img"></span>
                                         BigCommerce
                                      </span>
                                 </label>
                                 <label class="radius">
-                                    <input type="radio" name="administrativePanel" id="prestaShop Admin"/> 
+                                    <input type="radio" name="administrativePanel" id="prestaShop Admin" value="PrestaShop"/> 
                                     <span >
                                         <span class="radio-img"></span>
                                         PrestaShop 
                                      </span>
                                 </label>
                                 <label class="radius">
-                                    <input type="radio" name="administrativePanel" id="otherAdmin"/> 
+                                    <input type="radio" name="administrativePanel" id="otherAdmin" value="Admin panel"/> 
                                     <span >
                                         <span class="radio-img"></span>
                                         Other
@@ -506,10 +507,10 @@
                                 </label>
                             </div>
                         </fieldset>
-                        <fieldset id="step8" class="fieldset">
+                        <fieldset id="step8" class="fieldset multiStep top-fieldset">
                             <div class="form-card">
-                                    <label for="realTimeCommunicationCheck" class="checkbox checkbox-add-text radius">
-                                      <input class="checkbox__input" type="checkbox" id="realTimeCommunicationCheck">
+                                    <label for="kindsFunctionality1" class="checkbox checkbox-add-text radius">
+                                      <input class="checkbox__input add-checkbox" type="checkbox" id="kindsFunctionality1" value="Real-time communication ">
                                       <span>
                                       <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -528,8 +529,8 @@
                                     </span>
                                 </span>
                                     </label>
-                                    <label for="userRolesCheck" class="checkbox checkbox-add-text radius">
-                                        <input class="checkbox__input" type="checkbox" id="userRolesCheck">
+                                    <label for="kindsFunctionality2" class="checkbox checkbox-add-text radius">
+                                        <input class="checkbox__input add-checkbox" type="checkbox" id="kindsFunctionality2" value="User roles">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -548,8 +549,8 @@
                                       </span>
                                   </span>
                                     </label>
-                                    <label for="socialFeaturesCheck" class="checkbox checkbox-add-text radius">
-                                        <input class="checkbox__input" type="checkbox" id="socialFeaturesCheck">
+                                    <label for="kindsFunctionality3" class="checkbox checkbox-add-text radius">
+                                        <input class="checkbox__input add-checkbox" type="checkbox" id="kindsFunctionality3" value="Social features">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -568,8 +569,8 @@
                                       </span>
                                   </span>
                                     </label>
-                                    <label for="geolocationServicesCheck" class="checkbox checkbox-add-text radius">
-                                        <input class="checkbox__input" type="checkbox" id="geolocationServicesCheck">
+                                    <label for="kindsFunctionality4" class="checkbox checkbox-add-text radius">
+                                        <input class="checkbox__input add-checkbox" type="checkbox" id="kindsFunctionality4" value="Geolocation services">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -589,8 +590,8 @@
                                       </span>
                                   </span>
                                     </label>
-                                    <label for="paymentsAndPurchasingCheck" class="checkbox checkbox-add-text radius">
-                                        <input class="checkbox__input" type="checkbox" id="paymentsAndPurchasingCheck">
+                                    <label for="kindsFunctionality5" class="checkbox checkbox-add-text radius">
+                                        <input class="checkbox__input add-checkbox" type="checkbox" id="kindsFunctionality5" value="Payments and purchasing">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -609,8 +610,8 @@
                                       </span>
                                   </span>
                                     </label>
-                                    <label for="calendarCheck" class="checkbox checkbox-add-text radius">
-                                        <input class="checkbox__input" type="checkbox" id="calendarCheck">
+                                    <label for="kindsFunctionality6" class="checkbox checkbox-add-text radius">
+                                        <input class="checkbox__input add-checkbox" type="checkbox" id="kindsFunctionality6" value="Calendar">
                                         <span>
                                         <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
@@ -631,25 +632,453 @@
                                     </label>
 
                          </fieldset>
-                        <fieldset id="step5" class="fieldset">
+                         <fieldset id="step8_1" class="fieldset">
+                          <div class="form-card">
+
+
+                                  <label for="telephonyCheck" class="checkbox radius">
+                                    <input class="checkbox__input" type="checkbox" id="telephonyCheck" value="Mobile telephony"> 
+                                    <span>
+                                    <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                      <path class="tick" 
+                                      d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                       10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                        13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                         6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                      
+                                  </svg>
+                                  Mobile telephony
+                              </span>
+                                  </label>
+                  
+                                  <label for="teleconferencingCheck" class="checkbox radius">
+                                      <input class="checkbox__input" type="checkbox" id="teleconferencingCheck" value="Teleconferencing">
+                                      <span>
+                                      <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                        <path class="tick" 
+                                        d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                         10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                          13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                           6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                        
+                                    </svg>
+                                    Teleconferencing
+                                  </span>
+                                    </label>
+                                    <label for="videoCallingCheck" class="checkbox radius">
+                                      <input class="checkbox__input" type="checkbox" id="videoCallingCheck" value="Video calling / video conferencing">
+                                      <span>
+                                      <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                        <path class="tick" 
+                                        d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                         10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                          13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                           6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                        
+                                    </svg>
+                                    Video calling / video conferencing
+                                  </span>
+                                    </label>
+                                    <label for="teamMessagingCheck" class="checkbox radius">
+                                      <input class="checkbox__input" type="checkbox" id="teamMessagingCheck" value="Team messaging / one-to-one messaging">
+                                      <span>
+                                      <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                        <path class="tick" 
+                                        d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                         10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                          13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                           6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                        
+                                    </svg>
+                                    Team messaging / one-to-one messaging
+                                      </span>
+                                    </label>
+                                    <label for="fileSharingCheck" class="checkbox radius">
+                                      <input class="checkbox__input" type="checkbox" id="fileSharingCheck" value="File sharing / screen sharing">
+                                      <span>
+                                      <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                        <path class="tick" 
+                                        d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                         10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                          13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                           6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                        
+                                    </svg>
+                                    File sharing / screen sharing
+                                      </span>
+                                    </label>
+                                    <label for="liveMeetingCheck" class="checkbox radius">
+                                      <input class="checkbox__input" type="checkbox" id="liveMeetingCheck" value="Live meeting transcription">
+                                      <span>
+                                      <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                        <path class="tick" 
+                                        d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                         10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                          13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                           6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                        
+                                    </svg>
+                                    Live meeting transcription
+                                      </span>
+                                    </label>
+                                    <label for="chatCheck" class="checkbox radius">
+                                      <input class="checkbox__input" type="checkbox" id="chatCheck" value="Live customer chat">
+                                      <span>
+                                      <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                        <path class="tick" 
+                                        d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                         10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                          13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                           6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                        
+                                    </svg>
+                                    Live customer chat
+                                      </span>
+                                    </label> 
+                       </fieldset>
+                     
+                         <fieldset id="step8_2" class="fieldset">
                             <div class="form-card">
-                                <div class="row">
-                                    <div class="col-7">
-                                        <h2 class="fs-title">Finish:</h2>
-                                    </div>
-                                    <div class="col-5">
-                                        <h2 class="steps">Step 4 - 4</h2>
-                                    </div>
-                                </div> <br><br>
-                                <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
-                                <div class="row justify-content-center">
-                                    <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
-                                </div> <br><br>
-                                <div class="row justify-content-center">
-                                    <div class="col-7 text-center">
-                                        <h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
-                                    </div>
-                                </div>
+                                    <label for="primaryOwnerCheck" class="checkbox radius">
+                                      <input class="checkbox__input" type="checkbox" id="primaryOwnerCheck" value="Primary Owner">
+                                      <span>
+                                      <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                        <path class="tick" 
+                                        d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                         10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                          13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                           6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                        
+                                    </svg>
+                                    Primary Owner
+                                </span>
+                                    </label>
+
+                                    <label for="ownerCheck" class="checkbox radius">
+                                        <input class="checkbox__input" type="checkbox" id="ownerCheck" value="Owner">
+                                        <span>
+                                        <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                          <path class="tick" 
+                                          d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                           10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                            13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                             6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                          
+                                      </svg>
+                                      Owner
+                                    </span>
+                                      </label>
+                                      <label for="adminCheck" class="checkbox radius">
+                                        <input class="checkbox__input" type="checkbox" id="adminCheck" value="Admin">
+                                        <span>
+                                        <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                          <path class="tick" 
+                                          d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                           10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                            13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                             6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                          
+                                      </svg>
+                                      Admin
+                                    </span>
+                                      </label>
+                                      <label for="editorCheck" class="checkbox radius"> 
+                                        <input class="checkbox__input" type="checkbox" id="editorCheck" value="Editor">
+                                        <span>
+                                        <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                          <path class="tick" 
+                                          d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                           10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                            13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                             6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                          
+                                      </svg>
+                                      Editor
+                                        </span>
+                                      </label>
+                                      <label for="contributorCheck" class="checkbox radius">
+                                        <input class="checkbox__input" type="checkbox" id="contributorCheck" value="Contributor">
+                                        <span>
+                                        <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                          <path class="tick" 
+                                          d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                           10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                            13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                             6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                          
+                                      </svg>
+                                      Contributor
+                                        </span>
+                                      </label>
+                                      <label for="viewerCheck" class="checkbox radius">
+                                        <input class="checkbox__input" type="checkbox" id="viewerCheck" value="Viewer">
+                                        <span>
+                                        <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                          <path class="tick" 
+                                          d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                           10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                            13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                             6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                          
+                                      </svg>
+                                      Viewer
+                                        </span>
+                                      </label>
+                                      <label for="billingCheck" class="checkbox radius">
+                                        <input class="checkbox__input" type="checkbox" id="billingCheck" value="Billing">
+                                        <span>
+                                        <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                          <path class="tick" 
+                                          d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                           10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                            13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                             6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                          
+                                      </svg>
+                                      Billing
+                                        </span>
+                                      </label>
+                         </fieldset>
+                         <fieldset id="step8_3" class="fieldset">
+                            <div class="form-card">
+                                    <label for="chatsMessagingCheck" class="checkbox radius">
+                                      <input class="checkbox__input" type="checkbox" id="chatsMessagingCheck" value="Chats & Messaging">
+                                      <span>
+                                      <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                        <path class="tick" 
+                                        d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                         10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                          13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                           6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                        
+                                    </svg>
+                                    Chats & Messaging
+                                </span>
+                                    </label>
+
+                                    <label for="forumsCheck" class="checkbox radius">
+                                        <input class="checkbox__input" type="checkbox" id="forumsCheck" value="Forums">
+                                        <span>
+                                        <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                          <path class="tick" 
+                                          d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                           10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                            13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                             6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                          
+                                      </svg>
+                                      Forums
+                                    </span>
+                                      </label>
+                                      <label for="commentsCheck" class="checkbox radius">
+                                        <input class="checkbox__input" type="checkbox" id="commentsCheck" value="Comments">
+                                        <span>
+                                        <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                          <path class="tick" 
+                                          d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                           10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                            13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                             6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                          
+                                      </svg>
+                                      Comments
+                                    </span>
+                                      </label>
+                                      <label for="socialSharingCheck" class="checkbox radius">
+                                        <input class="checkbox__input" type="checkbox" id="socialSharingCheck" value="Social Sharing">
+                                        <span>
+                                        <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                          <path class="tick" 
+                                          d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                           10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                            13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                             6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                          
+                                      </svg>
+                                      Social Sharing
+                                        </span>
+                                      </label>
+                                      <label for="likesSubscriptionsCheck" class="checkbox radius">
+                                        <input class="checkbox__input" type="checkbox" id="likesSubscriptionsCheck" value="Likes & Subscriptions">
+                                        <span>
+                                        <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                          <path class="tick" 
+                                          d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                           10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                            13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                             6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                          
+                                      </svg>
+                                      Likes & Subscriptions
+                                        </span>
+                                      </label>
+                                      <label for="notPlannedCheck" class="checkbox radius">
+                                        <input class="checkbox__input" type="checkbox" id="notPlannedCheck" value="Not planned">
+                                        <span>
+                                        <svg class="checkbox__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 1.92H5.3C3.70942 1.92 2.42 3.20942 2.42 4.8V19.2C2.42 20.7906 3.70942 22.08 5.3 22.08H19.7C21.2906 22.08 22.58 20.7906 22.58 19.2V4.8C22.58 3.20942 21.2906 1.92 19.7 1.92ZM5.3 0C2.64903 0 0.5 2.14903 0.5 4.8V19.2C0.5 21.851 2.64903 24 5.3 24H19.7C22.351 24 24.5 21.851 24.5 19.2V4.8C24.5 2.14903 22.351 0 19.7 0H5.3Z" fill="#2584F4"/>
+                                          <path class="tick" 
+                                          d="M18.4789 6.81089C18.8595 7.13059 18.9088 7.6983 18.5891 8.07889L11.0291 17.0789C10.8616 17.2784
+                                           10.6158 17.3954 10.3554 17.3999C10.0949 17.4043 9.84531 17.2957 9.67104 17.1021L6.43104 13.5021C6.09853
+                                            13.1326 6.12848 12.5636 6.49794 12.2311C6.8674 11.8985 7.43646 11.9285 7.76897 12.298L10.3166 15.1286L17.2109
+                                             6.92115C17.5306 6.54055 18.0983 6.49118 18.4789 6.81089Z" fill="#2584F4"/>
+                                          
+                                      </svg>
+                                      Not planned
+                                        </span>
+                                      </label>
+
+                         </fieldset>
+                         <fieldset  id="step8_4" class="fieldset">
+                            <div class="form-card">
+                                   <label class="radius">
+                                       <input type="radio" name="geolocationServices" id="simpleGeolocationServices" value=" Simple: pins on map" checked/>
+                                       <span> 
+                                           <span class="radio-img"></span>
+                                           Simple: pins on map
+                                        </span>
+                                   </label>
+                                   <label class="radius">
+                                       <input type="radio" name="geolocationServices" id="advancedGeolocationServices" value="Advanced: routes, directions"/>
+                                       
+                                       <span>
+                                           <span class="radio-img"></span>
+                                           Advanced: routes, directions
+                                       </span>
+                                   </label>
+                                   <label class="radius">
+                                       <input type="radio" name="geolocationServices" id="otherGeolocationServices" value="Geolocation"/>
+                                       
+                                       <span >
+                                           <span class="radio-img"></span>
+                                           Other
+                                        </span>
+                                   </label>
+                            </div>
+                        </fieldset>
+                        <fieldset  id="step8_5" class="fieldset">
+                            <div class="form-card">
+                                   <label class="radius">
+                                       <input type="radio" name="paymentsAndPurchasing" id="settingPaymentsAndPurchasing" value="Setting up payment + payout systems" checked/>
+                                       <span> 
+                                           <span class="radio-img"></span>
+                                           Setting up payment + payout systems 
+                                        </span>
+                                   </label>
+                                   <label class="radius">
+                                       <input type="radio" name="paymentsAndPurchasing" id="cryptoWalletsPaymentsAndPurchasing" value="Crypto Wallets"/>
+                                       
+                                       <span>
+                                           <span class="radio-img"></span>
+                                           Crypto Wallets
+                                       </span>
+                                   </label>
+                                   <label class="radius">
+                                       <input type="radio" name="paymentsAndPurchasing" id="payPalPaymentsAndPurchasing" value="Stripe/PayPal etc."/>
+                                       
+                                       <span >
+                                           <span class="radio-img"></span>
+                                           Stripe/PayPal etc.
+                                        </span>
+                                   </label>
+                                   <label class="radius">
+                                    <input type="radio" name="paymentsAndPurchasing" id="bankingPaymentsAndPurchasing" value=" Banking payment system"/>
+                                    
+                                    <span >
+                                        <span class="radio-img"></span>
+                                        Banking payment system
+                                     </span>
+                                </label>
+                                <label class="radius">
+                                    <input type="radio" name="paymentsAndPurchasing" id="otherPaymentsAndPurchasing" value="Payment"/>
+                                    
+                                    <span >
+                                        <span class="radio-img"></span>
+                                        Other
+                                     </span>
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset  id="step8_6" class="fieldset">
+                            <div class="form-card">
+                                   <label class="radius">
+                                       <input type="radio" name="calendar" id="simpleCalendar" value="Simple: viewing generated schedule from admin" checked/>
+                                       <span> 
+                                           <span class="radio-img"></span>
+                                           Simple: viewing generated schedule from admin
+                                        </span>
+                                   </label>
+                                   <label class="radius">
+                                       <input type="radio" name="calendar" id="advancedCalendar" value="Advanced: booking app in someone’s schedule"/>
+                                       
+                                       <span>
+                                           <span class="radio-img"></span>
+                                           Advanced: booking app in someone’s schedule
+                                       </span>
+                                   </label>
+                                   <label class="radius">
+                                       <input type="radio" name="calendar" id="otherCalendar" value="Calendar"/>
+                                       
+                                       <span >
+                                           <span class="radio-img"></span>
+                                           Other
+                                        </span>
+                                   </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset  id="step9" class="fieldset top-fieldset">
+                            <div class="form-card">
+                                   <label class="radius">
+                                       <input type="radio" name="time" id="time1" value="1-3 months" checked/>
+                                       <span> 
+                                           <span class="radio-img"></span>
+                                           1-3 months
+                                        </span>
+                                   </label>
+                                   <label class="radius">
+                                       <input type="radio" name="time" id="time2" value="3-6 months"/>
+                                       
+                                       <span>
+                                           <span class="radio-img"></span>
+                                           3-6 months
+                                       </span>
+                                   </label>
+                                   <label class="radius">
+                                       <input type="radio" name="time" id="time3" value="6-12 months"/>
+                                       
+                                       <span >
+                                           <span class="radio-img"></span>
+                                           6-12 months
+                                        </span>
+                                   </label>
+                                   <label class="radius">
+                                    <input type="radio" name="time" id="time4" value="1+ year"/>
+                                    
+                                    <span >
+                                        <span class="radio-img"></span>
+                                        1+ year
+                                     </span>
+                                </label>
                             </div>
                         </fieldset>
                         <div class="btns-block">
@@ -675,8 +1104,8 @@
                                  <img src="/media/formstepper/common-icons/Lock.svg" alt="Lock">
                                  $ <span>summ</span>
                             </div>
-                            <div class="fieldset__payment__tags">
-                                <div class="fieldset__payment__tag">Education</div>
+                            <div class="fieldset__payment__tags" id="selectedOptions">
+                                <div class="fieldset__payment__tag" id="educationTag" data-input="industry">Education</div>
                             </div>
                             <div class="fieldset__payment__info">
                                 <p>Do you already have requirements? <a>Schedule a call</a> for a detailed estimate</p>

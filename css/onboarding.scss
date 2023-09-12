@@ -408,7 +408,7 @@ label {
 
         &__tags {
             display: flex;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             gap: 8px;
             margin-bottom: 56px;
         }
@@ -897,3 +897,4 @@ margin-bottom: 32px;
     }
 }
 
+body { padding: 0 calc(20px - (100vw - 100%)) 0 0; }
