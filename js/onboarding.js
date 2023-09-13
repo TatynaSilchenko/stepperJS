@@ -79,27 +79,32 @@ $(document).ready(function(){
       let [ numberID, subStepNumber, nextStep, nextStepNumber ] = checkID(current_fs__id, isPrev);
       next_fs =  $(`#${nextStep}`);
       checkIsPreviousStep(nextStep);
-      showNewStep(current_fs, next_fs);
+      showNewStep(current_fs, next_fs, nextStepNumber);
 
       setHeaderTitle(nextStepNumber);
-
-      addOptionToList('productVersion');
-      addOptionToList('administrativePanel');
-      
-      addOptionToList('geolocationServices');
-      addOptionToList('paymentsAndPurchasing');
-      addOptionToList('calendar');
-
-
+         
       if (subStepNumber) return;
 
       isPrev ? setProgressBar(--current) : setProgressBar(++current);
     }
 
-    const showNewStep = (current_fs, next_fs ) => {
+    const showNewStep = (current_fs, next_fs, nextStepNumber ) => {
       current_fs.removeClass('active');
       next_fs.addClass('active');
       next_fs.show();
+
+      switch (nextStepNumber) {
+    
+        case 2 :
+          addOptionToList('productVersion');
+          break;
+        case 6 : 
+        addOptionToList('administrativePanel');
+        break;
+        case 9 : 
+        addOptionToList('time');
+        break;
+      }
 
       current_fs.animate({opacity: 0}, {
         step: function(now) {
@@ -120,6 +125,46 @@ $(document).ready(function(){
        return  $("#stepName").html(StepNames[number - 1]["title"])
     }
 
+
+
+     const addOptionToList = (name) => {
+      $(`input[type='radio'][name=${name}]`).on("change", function() {
+        // Находим выбранную радиокнопку среди радиокнопок с атрибутом name="industry"
+        let selectedRadioButton = $(`input[type='radio'][name=${name}]:checked`);
+        // let selectedRadioButtonID = selectedRadioButton.attr('id');
+
+        // var selectedText = selectedRadioButton.val(); // Для текста
+      
+        // Удаляем остальные радиокнопки с атрибутом name="industry"
+        $(`[data-input=${name}]`).remove();
+      
+        // Добавляем значение (или текст) в элемент с ID "selectedOptions"
+
+        renderNewOption(selectedRadioButton, name)
+      });
+
+    }
+
+    const renderNewOption = (el, name ) => {
+      let elementId =  el.attr('id');
+      let selectedText = el.val();
+     return  $("#selectedOptions").append(`<div class="fieldset__payment__tag" data-input=${name ? name : selectedText} id="${elementId}Tag">${selectedText}</>`)
+    }
+
+     addOptionToList('industry');
+
+     $("input[type='checkbox']").on("change", function() {
+      let selectedCheckboxID = $(this).attr('id');
+      // var selectedText = $(this).val();
+      if ($(this).is(":checked")) {
+        renderNewOption($(this), $(this));
+      } else {
+
+        let newCon =  $(`#${selectedCheckboxID}Tag`)
+        newCon.remove();
+      }
+    });
+
     $(".multiStep .checkbox__input").on("change", function(e) {
       
       if ($(this).is(":checked")) {
@@ -130,45 +175,28 @@ $(document).ready(function(){
        let newId = changeId(closestMultiStepID, index);
        let nextStep = $(`#${newId}`);
 
+       let nxtStepRadio =  $(`#${newId} input[type='radio']:checked`);
+
+       if (nxtStepRadio.length) {
+        let nxtStepRadioVal =  nxtStepRadio.val();;
+        let nxtStepRadioName =  $(`#${newId} input[type='radio']:checked`).attr("name");
+ 
+        $(`[data-input=${nxtStepRadioName}]`).remove();
+        $("#selectedOptions").append(`<div class="fieldset__payment__tag" data-input=${nxtStepRadioName} id="${nxtStepRadio.attr('id')}Tag">${nxtStepRadioVal}</>`);
+ 
+       addOptionToList(nxtStepRadioName);
+       } else {
+
+       }
+
+
+
+
        let [ numberID ] = checkID(closestMultiStepID, false);
        $("#stepName").html(StepNames[numberID - 1]["subtitles"][index])
     showNewStep(closestMultiStep, nextStep);
       }
     });
-
-     const addOptionToList = (name) => {
-      $(`input[type='radio'][name=${name}]`).on("change", function() {
-        // Находим выбранную радиокнопку среди радиокнопок с атрибутом name="industry"
-        let selectedRadioButton = $(`input[type='radio'][name=${name}]:checked`);
-        let selectedRadioButtonID = selectedRadioButton.attr('id');
-
-        console.log('selectedRadioButtonID',selectedRadioButtonID)
-
-        var selectedText = selectedRadioButton.val(); // Для текста
-      
-        // Удаляем остальные радиокнопки с атрибутом name="industry"
-        $(`[data-input=${name}]`).remove();
-      
-        // Добавляем значение (или текст) в элемент с ID "selectedOptions"
-  
-        $("#selectedOptions").append(`<div class="fieldset__payment__tag" data-input=${name} id="${selectedRadioButtonID}Tag">${selectedText}</>`); // Для текста
-      });
-
-    }
-
-     addOptionToList('industry');
-
-     $("input[type='checkbox']").on("change", function() {
-      let selectedCheckboxID = $(this).attr('id');
-      var selectedText = $(this).val();
-      if ($(this).is(":checked")) {
-
-        $("#selectedOptions").append(`<div class="fieldset__payment__tag" id="${selectedCheckboxID}Tag">${selectedText}</>`); 
-      } else {
-
-        let newCon =  $(`#${selectedCheckboxID}Tag`)
-        newCon.remove();
-      }
-          });
     
     })
+
