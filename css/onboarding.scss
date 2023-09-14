@@ -1361,13 +1361,29 @@ margin-bottom: 32px;
 
     .contact-block {
         display: grid;
-        width: 67%;
+        width: 83.4%;
         grid-template-columns: minmax(336px, 38.5%) auto;
         gap: 24px;
         align-items: flex-start;
 
         @media (min-width: 1920px) {
             gap: 32px;
+        }
+
+        .fieldset__payment__summ {
+            font-size: 32px;
+
+            @media (min-width: 1280px) {
+                font-size: 24px
+            }
+
+            @media (min-width: 1440px) {
+                font-size: 32px
+            }
+
+            @media (min-width: 1920px) {
+                font-size: 40px
+            }
         }
     }
 

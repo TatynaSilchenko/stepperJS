@@ -1227,7 +1227,7 @@ h2 {
 }
 .thank-you-page .contact-block {
   display: grid;
-  width: 67%;
+  width: 83.4%;
   grid-template-columns: minmax(336px, 38.5%) auto;
   gap: 24px;
   align-items: flex-start;
@@ -1235,6 +1235,24 @@ h2 {
 @media (min-width: 1920px) {
   .thank-you-page .contact-block {
     gap: 32px;
+  }
+}
+.thank-you-page .contact-block .fieldset__payment__summ {
+  font-size: 32px;
+}
+@media (min-width: 1280px) {
+  .thank-you-page .contact-block .fieldset__payment__summ {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1440px) {
+  .thank-you-page .contact-block .fieldset__payment__summ {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1920px) {
+  .thank-you-page .contact-block .fieldset__payment__summ {
+    font-size: 40px;
   }
 }
 .thank-you-page .contacts-form .formError + input {
