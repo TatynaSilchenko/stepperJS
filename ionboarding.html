@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onboarding</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/onboarding.css">
     <link rel="stylesheet" href="fonts/fonts.css">
 </head>
 <body>
 
-    <div class="onboarding pl-site main-banner" id="onboarding">
+    <div class="onboarding pl-site main-banner" id="onboarding"  style="display: none;">
         <div class="section-container">
             <div class="main__flex-line">
                 <div class="main-info">
@@ -36,7 +37,7 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
     <div class="stepper top-header" id="onboardingCalc" style="display: none;">
         <div class="stepper__wrapper">
         <h1 class="" id="stepName">Choose your industry</h2>
@@ -1081,6 +1082,7 @@
                                 </label>
                             </div>
                         </fieldset>
+
                         <div class="btns-block">
                             <button type="button" class="previous action-button-previous" id="prevBtn">
                                 <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1090,9 +1092,12 @@
                                     
                                 Back
                          </button> 
-                            <button type="button" class="next action-button">
+                            <button type="button" class="next action-button nextBtn">
                                 Next
                             </button>
+                            <button type="button" class="next action-button jumpBtn" style="display: none;">
+                              Jump to estimate
+                          </button>
 
                         </div>
                     </div>
@@ -1105,7 +1110,7 @@
                                  $ <span>summ</span>
                             </div>
                             <div class="fieldset__payment__tags" id="selectedOptions">
-                                <!-- <div class="fieldset__payment__tag" id="educationTag" data-input="industry">Education</div> -->
+                                <div class="fieldset__payment__tag" id="educationTag" data-input="industry">Education</div>
                             </div>
                             <div class="fieldset__payment__info">
                                 <p>Do you already have requirements? <a>Schedule a call</a> for a detailed estimate</p>
@@ -1115,7 +1120,223 @@
                     </form>
         </div>
     </div>
+    <div class="thank-you-page top-header main-banner" id="onboardingThankyou" >
+      <div class="section-container padding-block">
+        <p class="title-info">Thank you!</p>
+        <h2>Your personalized estimate is nearly complete!</h2>
+        <p>To ensure its accuracy, we just have a few quick questions left. 
+          <a href="">Complete the form</a> or <a href="">Schedule a call</a> with us now to kickstart your project without delay.
+        </p>
+        <div class="contact-block ">
+          <div class="fieldset__payment radius">
+            <div class="fieldset__payment__title">
+                Summary
+            </div>
+            <div class="fieldset__payment__summ">
+                 <img src="/media/formstepper/common-icons/Lock.svg" alt="Lock">
+                 $ <span>summ</span>
+            </div>
+            <div class="fieldset__payment__tags" id="selectedOptions">
+                <div class="fieldset__payment__tag" id="educationTag" data-input="industry">Education</div>
+            </div>
+            <div class="fieldset__payment__info">
+                <p>Do you already have requirements? <a>Schedule a call</a> for a detailed estimate</p>
+            </div>
+         </div>
+         <form action="" class="contacts-form r-column">
+          <div class="input-wrapper">
+            <label for="name" class="contacts-form-label name">Full name*</label>
+            <input name="name" type="text" placeholder="Enter your name" class="input-contacts-form" autocomplete="off">
+            <p class="add-text"></p>
+          </div>
+          <div class="input-wrapper">
+            <label for="email" class="contacts-form-label name">E-mail*</label>
+            <input name="email" type="text" placeholder="Enter e-mail" class="input-contacts-form" autocomplete="off">
+            <p class="add-text"></p>
+          </div>
+          <div class="input-wrapper">
+            <label for="phone" class="contacts-form-label name">Phone*</label>
+            <input name="phone" type="number" placeholder="Enter phone number" class="input-contacts-form" autocomplete="off">
+            <p class="add-text">We’ll call you ASAP or <a href="">Schedule a call</a> </p>
+          </div>
+          <div class="input-wrapper">
+            <div class="checkbox-container">
+              <input name="privacy-check" class="checkbox-input" id="privacyCheckAccept" type="checkbox" checked="">
+              <label class="checkbox checkbox-checked" id="checkboxAccept" for="privacyCheckAccept">
+                <span class="checkmark" id="checkmark">
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4736 1.01361C15.9493 1.41324 16.0111 2.12287 15.6114 2.59862L6.16143 13.8486C5.95199
+                     14.0979 5.6448 14.2443 5.31922 14.2499C4.99365 14.2554 4.68163 14.1196 4.46381 13.8776L0.413804 9.37761C-0.00183761 8.91579 0.0356005 8.20446 
+                     0.497424 7.78882C0.959248 7.37318 1.67057 7.41062 2.08622 7.87244L5.27073 11.4108L13.8886 1.15143C14.2882 0.675687 14.9979 0.61398 15.4736 1.01361Z" 
+                     fill="#00E2F8">
+                    </path>
+                  </svg>
+                </span>
+                <span>I accept <a href="/privacy">Privacy Policy &amp; Cookie</a></span>
+              </label>
+            </div>
+          </div>
+          <a id="onboardingFormSubmite" class="contact-form-btn formSubmit">Send request</a>
+         </form>
+        </div>
+        </div>
+        <section class="project-team padding-block" >
+          <div class="section__bg"><div class="section__bg__item"><div class="bg-item"></div></div><div class="section__bg__item"><div class="bg-item item-reverse"></div></div></div>
+          <div class="section-container">
+            <!-- <p class="title-info title-margin title-margin">project team</p> -->
+      
+            <h2>This team will match your desires!</h2>
+      
+            <div class="members-list">
+              <div class="swiper caseSwiperTeamOnboard">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide member-info radius">
+                      <div class="member-info__photo">
+                        <img src="../../../../../media/img/team/members/Photo1.png" alt="{%F:member>team-member>name%}">
+                      </div>
+                      <div class="member-info__name">
+                        Aleksandr Isakov
+                      </div>
+                      <div class="member-info__text">
+                        DevOps
+                      </div>
+                      <div class="member-info__title">
+                        Expertise
+                      </div>
+                      <div class="member-info__text">
+                        Lead DevOps with 6+ years of experience in imolementing the entire infrastracture and architecture
+                      </div>
+      
+                      <div class="member-info__skills">
+                          <div class="member-info__skill">Docker</div>
+                          <div class="member-info__skill">Kubernetes</div>
+                          <div class="member-info__skill">Terraform</div>
+                          <div class="member-info__skill">Azure</div>
+                          <div class="member-info__skill">Dart</div>
+                      </div>
+                      
+            
+                    </div>
+                    <div class="swiper-slide member-info radius">
+                      <div class="member-info__photo">
+                        <img src="../../../../../media/img/team/members/Photo1.png" alt="{%F:member>team-member>name%}">
+                      </div>
+                      <div class="member-info__name">
+                        Aleksandr Isakov
+                      </div>
+                      <div class="member-info__text">
+                        DevOps
+                      </div>
+                      <div class="member-info__title">
+                        Expertise
+                      </div>
+                      <div class="member-info__text">
+                        Lead DevOps with 6+ years of experience in imolementing the entire infrastracture and architecture
+                      </div>
+      
+                      <div class="member-info__skills">
+                          <div class="member-info__skill">Docker</div>
+                          <div class="member-info__skill">Kubernetes</div>
+                          <div class="member-info__skill">Terraform</div>
+                          <div class="member-info__skill">Azure</div>
+                          <div class="member-info__skill">Dart</div>
+                      </div>
+                      
+            
+                    </div>
+                    <div class="swiper-slide member-info radius">
+                      <div class="member-info__photo">
+                        <img src="../../../../../media/img/team/members/Photo1.png" alt="{%F:member>team-member>name%}">
+                      </div>
+                      <div class="member-info__name">
+                        Aleksandr Isakov
+                      </div>
+                      <div class="member-info__text">
+                        DevOps
+                      </div>
+                      <div class="member-info__title">
+                        Expertise
+                      </div>
+                      <div class="member-info__text">
+                        Lead DevOps with 6+ years of experience in imolementing the entire infrastracture and architecture
+                      </div>
+      
+                      <div class="member-info__skills">
+                          <div class="member-info__skill">Docker</div>
+                          <div class="member-info__skill">Kubernetes</div>
+                          <div class="member-info__skill">Terraform</div>
+                          <div class="member-info__skill">Azure</div>
+                          <div class="member-info__skill">Dart</div>
+                      </div>
+                      
+            
+                    </div>
+                    <div class="swiper-slide member-info radius">
+                      <div class="member-info__photo">
+                        <img src="../../../../../media/img/team/members/Photo1.png" alt="{%F:member>team-member>name%}">
+                      </div>
+                      <div class="member-info__name">
+                        Aleksandr Isakov
+                      </div>
+                      <div class="member-info__text">
+                        DevOps
+                      </div>
+                      <div class="member-info__title">
+                        Expertise
+                      </div>
+                      <div class="member-info__text">
+                        Lead DevOps with 6+ years of experience in imolementing the entire infrastracture and architecture
+                      </div>
+      
+                      <div class="member-info__skills">
+                          <div class="member-info__skill">Docker</div>
+                          <div class="member-info__skill">Kubernetes</div>
+                          <div class="member-info__skill">Terraform</div>
+                          <div class="member-info__skill">Azure</div>
+                          <div class="member-info__skill">Dart</div>
+                      </div>
+                      
+            
+                    </div>
+                    <div class="swiper-slide member-info radius">
+                      <div class="member-info__photo">
+                        <img src="../../../../../media/img/team/members/Photo1.png" alt="{%F:member>team-member>name%}">
+                      </div>
+                      <div class="member-info__name">
+                        Aleksandr Isakov
+                      </div>
+                      <div class="member-info__text">
+                        DevOps
+                      </div>
+                      <div class="member-info__title">
+                        Expertise
+                      </div>
+                      <div class="member-info__text">
+                        Lead DevOps with 6+ years of experience in imolementing the entire infrastracture and architecture
+                      </div>
+      
+                      <div class="member-info__skills">
+                          <div class="member-info__skill">Docker</div>
+                          <div class="member-info__skill">Kubernetes</div>
+                          <div class="member-info__skill">Terraform</div>
+                          <div class="member-info__skill">Azure</div>
+                          <div class="member-info__skill">Dart</div>
+                      </div>
+                      
+            
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+      
+            <a href="#" class="btn-call-to-schedule btn-main "> Hire team </a>
+          </div>
+        </section>
+      </div>
+    </div>
     <script src="js/jquery-3.6.0.min.js" ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/onboarding.js"></script>
 </body>
 </html>

@@ -19,7 +19,7 @@ $(document).ready(function(){
     
     setProgressBar(current);
     
-    $(".next").click(function(){
+    $(".next.nextBtn").click(function(){
     renderNextStep ();
     });
     
@@ -32,9 +32,13 @@ $(document).ready(function(){
       $("#onboardingCalc").show();
     })
     
-    $(".submit").click(function(){
-    return false;
+    $(".jumpBtn").click(function(){
+      $('#onboardingCalc').hide() ; 
+      $('#onboardingThankyou').show() ; 
+
     })
+
+
 
     function setProgressBar(curStep){
       let percent = parseFloat(100 / steps) * curStep;
@@ -79,6 +83,10 @@ $(document).ready(function(){
       let [ numberID, subStepNumber, nextStep, nextStepNumber ] = checkID(current_fs__id, isPrev);
       next_fs =  $(`#${nextStep}`);
       checkIsPreviousStep(nextStep);
+      if (nextStep == "step9") {
+        $('.nextBtn').hide(); 
+        $('.jumpBtn').show(); 
+      } 
       showNewStep(current_fs, next_fs, nextStepNumber);
 
       setHeaderTitle(nextStepNumber);
@@ -91,7 +99,22 @@ $(document).ready(function(){
     const showNewStep = (current_fs, next_fs, nextStepNumber ) => {
       current_fs.removeClass('active');
       next_fs.addClass('active');
+      let next_fs_id = next_fs.attr('id');
       next_fs.show();
+
+      let nxtStepRadio =  $(`#${next_fs_id} input[type='radio']:checked`);
+
+      // if (nxtStepRadio.length) {
+      //   let nxtStepRadioName =  $(`#${next_fs_id} input[type='radio']:checked`).attr("name");
+ 
+      //   $(`[data-input=${nxtStepRadioName}]`).remove();
+
+      //   renderNewOption(nxtStepRadio, nxtStepRadioName);
+ 
+      //  addOptionToList(nxtStepRadioName);
+      //  } else {
+
+      //  }
 
       switch (nextStepNumber) {
     
@@ -125,15 +148,10 @@ $(document).ready(function(){
        return  $("#stepName").html(StepNames[number - 1]["title"])
     }
 
-
-
      const addOptionToList = (name) => {
       $(`input[type='radio'][name=${name}]`).on("change", function() {
         // Находим выбранную радиокнопку среди радиокнопок с атрибутом name="industry"
         let selectedRadioButton = $(`input[type='radio'][name=${name}]:checked`);
-        // let selectedRadioButtonID = selectedRadioButton.attr('id');
-
-        // var selectedText = selectedRadioButton.val(); // Для текста
       
         // Удаляем остальные радиокнопки с атрибутом name="industry"
         $(`[data-input=${name}]`).remove();
@@ -155,7 +173,6 @@ $(document).ready(function(){
 
      $("input[type='checkbox']").on("change", function() {
       let selectedCheckboxID = $(this).attr('id');
-      // var selectedText = $(this).val();
       if ($(this).is(":checked")) {
         renderNewOption($(this), $(this));
       } else {
@@ -177,17 +194,17 @@ $(document).ready(function(){
 
        let nxtStepRadio =  $(`#${newId} input[type='radio']:checked`);
 
-       if (nxtStepRadio.length) {
-        let nxtStepRadioVal =  nxtStepRadio.val();;
-        let nxtStepRadioName =  $(`#${newId} input[type='radio']:checked`).attr("name");
+      //  if (nxtStepRadio.length) {
+      //   let nxtStepRadioName =  $(`#${newId} input[type='radio']:checked`).attr("name");
  
-        $(`[data-input=${nxtStepRadioName}]`).remove();
-        $("#selectedOptions").append(`<div class="fieldset__payment__tag" data-input=${nxtStepRadioName} id="${nxtStepRadio.attr('id')}Tag">${nxtStepRadioVal}</>`);
- 
-       addOptionToList(nxtStepRadioName);
-       } else {
+      //   $(`[data-input=${nxtStepRadioName}]`).remove();
 
-       }
+      //   renderNewOption(nxtStepRadio, nxtStepRadioName);
+ 
+      //  addOptionToList(nxtStepRadioName);
+      //  } else {
+
+      //  }
 
 
 
@@ -197,6 +214,61 @@ $(document).ready(function(){
     showNewStep(closestMultiStep, nextStep);
       }
     });
+
+    //change state of checkbox
+
+const changeCheckbox = () => {
+
+  let checkInput = document.querySelectorAll('.checkmark');
+  if (checkInput) {
+    checkInput = [...checkInput]
+    checkInput.forEach((el) => {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        let isChecked = el.closest('.checkbox-container').querySelector('.checkbox-input');
+        let labelChecked = el.closest('.checkbox-container').querySelector('.checkbox');
+        isChecked.removeAttribute("checked");
+        console.log(isChecked)
+        isChecked.checked = !isChecked.checked;
+        labelChecked.classList.toggle("checkbox-checked");
+      })
+    })
+  }
+}
+
+changeCheckbox();
+
+let projectTeam = new Swiper('.caseSwiperTeamOnboard', {
+  spaceBetween: 10,
+  slidesPerView: 1,
+  infinite: true,
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+
+  },
+  breakpoints: {
+
+    640: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+    },
+  },
+  on: {
+    init: function (slider) {
+      document.querySelector('.caseSwiperTeamOnboard').style.opacity = 1;
+
+    },
+  },
+});
+
     
     })
 
