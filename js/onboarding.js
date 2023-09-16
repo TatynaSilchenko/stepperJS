@@ -163,9 +163,15 @@ $(document).ready(function(){
    $("input[type='checkbox']").on("change", function() {
       let selectedCheckboxID = $(this).attr('id');
       if ($(this).is(":checked")) {
+        if (selectedCheckboxID.indexOf("other") !== -1) {
+          $(this).closest('.fieldset').find('.addition-input').show();
+        }
         renderNewOption($(this), $(this));
-      } else {
 
+      } else {
+        if (selectedCheckboxID.indexOf("other") !== -1) {
+          $(this).closest('.fieldset').find('.addition-input').hide();
+        }
         let newCon =  $(`#${selectedCheckboxID}Tag`)
         newCon.remove();
       }

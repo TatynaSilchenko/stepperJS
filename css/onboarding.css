@@ -894,6 +894,8 @@ a {
 @media (min-width: 1280px) {
   #msform .action-button {
     font-size: 16px;
+    padding: 15px 48px;
+    margin-right: 0;
   }
 }
 @media (min-width: 1440px) {
@@ -1102,6 +1104,7 @@ a {
 .fieldset label input {
   position: absolute;
   opacity: 0;
+  outline: none;
 }
 .fieldset label input:checked + span .radio-img::after {
   opacity: 1;
