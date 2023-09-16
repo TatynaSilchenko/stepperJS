@@ -118,15 +118,12 @@ $(document).ready(function(){
   // next_fs =  $(`#${nextStep}`);
   checkIsPreviousStep(nextStepId);
 
-  // if ($(`#${nextStep} input[type='radio']:checked`).length) {
-  //   let checkedRadio = $(`#${nextStep} input[type='radio']:checked`);
-  //   let checkedRadioId = checkedRadio.attr('id');
-  //   let checkedRadioName = checkedRadio.attr('name');
-
-
-  //   !$(`#selectedOptions #${checkedRadioId}Tag`).length &&   renderNewOption(checkedRadio, checkedRadioName);
-  //   console.log( $(` #${checkedRadioId}`))
-  // }
+  if ($(`#${nextStepId} input[type='radio']:checked`).length) {
+    let checkedRadio = $(`#${nextStepId} input[type='radio']:checked`);
+    let checkedRadioId = checkedRadio.attr('id');
+    let checkedRadioName = checkedRadio.attr('name');
+    !$(`#selectedOptions #${checkedRadioId}Tag`).length &&   renderNewOption(checkedRadio, checkedRadioName);
+  }
   if (nextStepId == "step9") {
     $('.nextBtn').hide(); 
     $('.jumpBtn').show(); 
@@ -144,21 +141,22 @@ $(document).ready(function(){
   current_fs.removeClass('active');
   next_fs.addClass('active');
   let next_fs_id = next_fs.attr('id');
+
   next_fs.show();
   let nxtStepRadio =  $(`#${next_fs_id} input[type='radio']:checked`);
 
-  // switch (nextStepNumber) {
+  switch (next_fs_id) {
     
-  //       case 2 :
-  //         addOptionToList('productVersion');
-  //         break;
-  //       case 6 : 
-  //       addOptionToList('administrativePanel');
-  //       break;
-  //       case 9 : 
-  //       addOptionToList('time');
-  //       break;
-  // }
+        case "step2" :
+          addOptionToList('productVersion');
+          break;
+        case "step6" : 
+        addOptionToList('administrativePanel');
+        break;
+        case "step9" : 
+        addOptionToList('time');
+        break;
+  }
   current_fs.animate({opacity: 0}, {
         step: function(now) {
         // for making fielset appear animation
@@ -179,6 +177,7 @@ $(document).ready(function(){
   }
    const addOptionToList = (name) => {
       $(`input[type='radio'][name=${name}]`).on("change", function() {
+        // debugger
         // Находим выбранную радиокнопку среди радиокнопок с атрибутом name="industry"
         let selectedRadioButton = $(`input[type='radio'][name=${name}]:checked`);
         let id = selectedRadioButton.attr("id");
@@ -219,13 +218,18 @@ $(document).ready(function(){
   });
   $(".multiStep .checkbox__input").on("change", function(e) {
       
-    //   if ($(this).is(":checked")) {
-    //    let checkboxes = $(".add-checkbox");
-    //    let index = checkboxes.index(this);
-    //    let closestMultiStep = $(this).closest(".multiStep");
-    //    let closestMultiStepID = closestMultiStep.attr('id');
-    //    let newId = changeId(closestMultiStepID, index);
-    //    let nextStep = $(`#${newId}`);
+      if ($(this).is(":checked")) {
+       let checkboxes = $(".add-checkbox");
+       let index = checkboxes.index(this);
+       let closestMultiStep = $(this).closest(".multiStep");
+       let closestMultiStepID = closestMultiStep.attr('id');
+       let newId = changeId(closestMultiStepID, index);
+
+       console.log($(`${newId}`))
+       $(`#${newId}`).addClass('top-fieldset');
+       steps++;
+       setProgressBar(curStep)
+      //  let nextStep = $(`#${newId}`);
 
     //    let nxtStepRadio =  $(`#${newId} input[type='radio']:checked`);
 
@@ -237,9 +241,11 @@ $(document).ready(function(){
     //     renderNewOption(nxtStepRadio, nxtStepRadioName);
  
     //    addOptionToList(nxtStepRadioName);
-    //    } else {
-
-    //    }
+       } else {
+        $(`#${newId}`).removeClass('top-fieldset');
+        steps--;
+        setProgressBar(curStep)
+       }
 
 
 
@@ -247,7 +253,7 @@ $(document).ready(function(){
     //    let [ numberID ] = checkID(closestMultiStepID, false);
     //    $("#stepName").html(StepNames[numberID - 1]["subtitles"][index])
     // showNewStep(closestMultiStep, nextStep);
-    //   }
+      // }
   });
   //change state of checkbox
 
