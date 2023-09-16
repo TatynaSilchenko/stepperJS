@@ -32,11 +32,7 @@ $(document).ready(function(){
   });
 
   $(".previous").click(function(){
-      
       renderNextStep ( true);
-  
-    // showNewStep(current_fs,next_fs,);
-    // setProgressBar(++current);
   }); 
   $("#startStepper").click(function(){
       $("#onboarding").hide();
@@ -48,7 +44,8 @@ $(document).ready(function(){
     $('#onboardingCalc').hide() ; 
     $('#onboardingThankyou').show();
     $("body").css("padding","0");   
-  })  
+  })
+
   function setProgressBar(curStep){
       let percent = parseFloat(100 / steps) * curStep;
       percent = percent.toFixed();
@@ -60,31 +57,7 @@ $(document).ready(function(){
      ? $("#prevBtn").css("display",'flex')
      : $("#prevBtn").hide()
   } 
-  const checkID = (id, isPrev = false) => {
-      let subStepNumber;
-      let nextStep;
-      let parts = id.split("_");
-      let numberID =  parts[0].replace("step", "");
 
-      if (parts.length > 1) {
-        subStepNumber = parts[1];
-      }
-
-      
-
-      // nextStep = isPrev ? subStepNumber ? parts[0] : 'step' + (+numberID - 1) 
-      // :
-      // 'step' + (+numberID + 1);
-      // debugger
-      nextStep = isPrev ? subStepNumber ? parts[0] : 'step' + (+numberID - 1) 
-      :
-      'step' + (+numberID + 1);
-
-      nextStepNumber = isPrev ? subStepNumber ? numberID : (+numberID - 1) 
-      : (+numberID + 1);
-
-      return [numberID, subStepNumber, nextStep, nextStepNumber];
-  } 
   const changeId = (id, index) => {
       return `${id}_${index + 1}`
   }
@@ -112,10 +85,6 @@ $(document).ready(function(){
   }
 
   let nextStepId = next_fs.attr('id');
-  // let current_fs__id = current_fs.attr('id');
-
-  // let [ numberID, subStepNumber, nextStep, nextStepNumber ] = checkID(current_fs__id, isPrev);
-  // next_fs =  $(`#${nextStep}`);
   checkIsPreviousStep(nextStepId);
 
   if ($(`#${nextStepId} input[type='radio']:checked`).length) {
@@ -133,8 +102,7 @@ $(document).ready(function(){
   }
   showNewStep(current_fs, next_fs);
   // // setHeaderTitle(nextStepNumber);
-     
-  // if (subStepNumber) return;
+
   isPrev ? setProgressBar(--current) : setProgressBar(++current);
   }
   const showNewStep = (current_fs, next_fs, nextStepNumber ) => {
@@ -177,8 +145,8 @@ $(document).ready(function(){
   }
    const addOptionToList = (name) => {
       $(`input[type='radio'][name=${name}]`).on("change", function() {
-        // debugger
         // Находим выбранную радиокнопку среди радиокнопок с атрибутом name="industry"
+        
         let selectedRadioButton = $(`input[type='radio'][name=${name}]:checked`);
         let id = selectedRadioButton.attr("id");
     
@@ -191,8 +159,29 @@ $(document).ready(function(){
         } else {
           selectedRadioButton.closest('.fieldset').find('.addition-input').hide();
         }
+
+          // Apply blur effect
+          const movingBox  = document.getElementById('summImg');
+            movingBox.innerHTML = shuffleWord(movingBox.innerText);
       });
 
+  }
+
+  const shuffleWord = (word) => {
+    // Преобразовать слово в массив символов
+    var characters = word.split('');
+  
+    // Перемешать символы в массиве
+    for (var i = characters.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = characters[i];
+      characters[i] = characters[j];
+      characters[j] = temp;
+    }
+  
+    // Объединить перемешанные символы обратно в слово
+    var shuffledWord = characters.join('');
+    return shuffledWord;
   }
   const renderNewOption = (el, name ) => {
       let elementId =  el.attr('id');
@@ -215,6 +204,9 @@ $(document).ready(function(){
         let newCon =  $(`#${selectedCheckboxID}Tag`)
         newCon.remove();
       }
+       // Apply blur effect
+       const movingBox  = document.getElementById('summImg');
+       movingBox.innerHTML = shuffleWord(movingBox.innerText);
   });
   $(".multiStep .checkbox__input").on("change", function(e) {
       
@@ -228,32 +220,13 @@ $(document).ready(function(){
        console.log($(`${newId}`))
        $(`#${newId}`).addClass('top-fieldset');
        steps++;
-       setProgressBar(curStep)
-      //  let nextStep = $(`#${newId}`);
+       setProgressBar(curStep);
 
-    //    let nxtStepRadio =  $(`#${newId} input[type='radio']:checked`);
-
-    //    if (nxtStepRadio.length) {
-    //     let nxtStepRadioName =  $(`#${newId} input[type='radio']:checked`).attr("name");
- 
-    //     $(`[data-input=${nxtStepRadioName}]`).remove();
-
-    //     renderNewOption(nxtStepRadio, nxtStepRadioName);
- 
-    //    addOptionToList(nxtStepRadioName);
        } else {
         $(`#${newId}`).removeClass('top-fieldset');
         steps--;
         setProgressBar(curStep)
        }
-
-
-
-
-    //    let [ numberID ] = checkID(closestMultiStepID, false);
-    //    $("#stepName").html(StepNames[numberID - 1]["subtitles"][index])
-    // showNewStep(closestMultiStep, nextStep);
-      // }
   });
   //change state of checkbox
 
@@ -308,8 +281,7 @@ $(document).ready(function(){
     },
   },
   });
-
-    
+ 
 function toggleActiveClass() {
   var bgCasesImgs = $(".bg-cases-img");
   var showArrows = $(".show-arrow");
@@ -326,5 +298,8 @@ function toggleActiveClass() {
 var counter = 0;
 
 setInterval(toggleActiveClass, 1400);
+
+
+
     })
 
