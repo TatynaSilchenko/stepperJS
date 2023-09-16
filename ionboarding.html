@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div class="onboarding pl-site main-banner" id="onboarding"  style="display: none;">
+    <div class="onboarding pl-site main-banner" id="onboarding" style="display: none;">
         <div class="section-container">
             <div class="main__flex-line">
                 <div class="main-info">
@@ -20,12 +20,13 @@
                          data-aos-duration="1000">
                          <p class="title-info">Pricing</p>
                          <h1>Product <br/> Cost Estimator</h1>
-                        <div class="onboarding__add-info">
-                            <p class="onboarding__time">2 min</p>
-                            <p>Find out how much your product will cost <b>in 2 minutes</b></p>
-                        </div>
+
                     </div>
                 </div>
+                <div class="onboarding__add-info">
+                  <p class="onboarding__time">2 min</p>
+                  <p>Find out how much your product will cost <b>in 2 minutes</b></p>
+              </div>
                 <div class="btn-block">
                     <div class="btn-block__items">
                         <button class="btn-main" id="startStepper"> Get Started </button>
@@ -38,9 +39,9 @@
         </div>
     </div>
     </div>
-    <div class="stepper top-header" id="onboardingCalc" style="display: none;">
+    <div class="stepper top-header" id="onboardingCalc" >
         <div class="stepper__wrapper">
-        <h1 class="" id="stepName">Choose your industry</h2>
+        <h1 id="stepName">Choose your industry</h2>
                     <form id="msform">
                         <div class="progress">
                             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
@@ -105,6 +106,10 @@
                                                 <span class="radio-img"></span>
                                                 Other</span>
                                         </label>
+
+                                        <div class="addition-input" style="display: none;"> 
+                                          <input type="text"  id="otherIndustryInput" class="inputOnboarding" placeholder="Enter your option"/>
+                                        </div>
                                  </div>
                         </fieldset>
                         <fieldset  id="step2" class="fieldset top-fieldset">
@@ -147,6 +152,9 @@
                                                Other
                                             </span>
                                        </label>
+                                       <div class="addition-input" style="display: none;"> 
+                                        <input type="text"  id="otherProductVersionInput" class="inputOnboarding" placeholder="Enter your option"/>
+                                      </div>
                                 </div>
                         </fieldset>
                         <fieldset id="step3" class="fieldset top-fieldset">
@@ -506,6 +514,9 @@
                                         Other
                                      </span>
                                 </label>
+                                <div class="addition-input" style="display: none;"> 
+                                  <input type="text"  id="otherAdministrativePanelInput" class="inputOnboarding" placeholder="Enter your option"/>
+                                </div>
                             </div>
                         </fieldset>
                         <fieldset id="step8" class="fieldset multiStep top-fieldset">
@@ -974,6 +985,9 @@
                                            Other
                                         </span>
                                    </label>
+                                   <div class="addition-input" style="display: none;"> 
+                                    <input type="text"  id="otherGeolocationServicesInput" class="inputOnboarding" placeholder="Enter your option"/>
+                                  </div>
                             </div>
                         </fieldset>
                         <fieldset  id="step8_5" class="fieldset">
@@ -1017,6 +1031,9 @@
                                         Other
                                      </span>
                                 </label>
+                                <div class="addition-input" style="display: none;"> 
+                                  <input type="text"  id="otherPaymentsAndPurchasingInput" class="inputOnboarding" placeholder="Enter your option"/>
+                                </div>
                             </div>
                         </fieldset>
                         <fieldset  id="step8_6" class="fieldset">
@@ -1044,6 +1061,9 @@
                                            Other
                                         </span>
                                    </label>
+                                   <div class="addition-input" style="display: none;"> 
+                                    <input type="text"  id="otherCalendarInput" class="inputOnboarding" placeholder="Enter your option"/>
+                                  </div>
                             </div>
                         </fieldset>
 
@@ -1120,51 +1140,46 @@
                     </form>
         </div>
     </div>
-    <div class="thank-you-page top-header main-banner" id="onboardingThankyou" >
-      <div class="section-container padding-block">
+    <div class="thank-you-page " id="onboardingThankyou" style="display: none;">
+      <div class="section-container">
         <p class="title-info">Thank you!</p>
         <h2>Your personalized estimate is nearly complete!</h2>
         <p>To ensure its accuracy, we just have a few quick questions left. 
           <a href="">Complete the form</a> or <a href="">Schedule a call</a> with us now to kickstart your project without delay.
         </p>
-        <div class="contact-block ">
+        <div class="contact-block">
           <div class="fieldset__payment radius">
             <div class="fieldset__payment__title">
                 Summary
             </div>
             <div class="fieldset__payment__summ">
-                 <img src="/media/formstepper/common-icons/Lock.svg" alt="Lock">
+                 <img src="/media/formstepper/common-icons/LockLight.svg" alt="Lock">
                  $ <span>summ</span>
             </div>
             <div class="fieldset__payment__summ">
-              <img src="/media/formstepper/common-icons/Lock.svg" alt="Lock">
-              max <span>summ</span>hours
-         </div>
+              <img src="/media/formstepper/common-icons/Frame-time.svg" alt="Lock">
+              min <span>summ</span>hours</div>
          <div class="fieldset__payment__summ">
-          <img src="/media/formstepper/common-icons/Lock.svg" alt="Lock">
-          min <span>summ</span>hours
-          </div>
+          <img src="/media/formstepper/common-icons/Frame-time.svg" alt="Lock">
+          max <span>summ</span>hours</div>
             <div class="fieldset__payment__tags" id="selectedOptions">
                 <div class="fieldset__payment__tag" id="educationTag" data-input="industry">Education</div>
-            </div>
-            <div class="fieldset__payment__info">
-                <p>Do you already have requirements? <a>Schedule a call</a> for a detailed estimate</p>
             </div>
          </div>
          <form action="" class="contacts-form r-column">
           <div class="input-wrapper">
             <label for="name" class="contacts-form-label name">Full name*</label>
-            <input name="name" type="text" placeholder="Enter your name" class="input-contacts-form" autocomplete="off">
+            <input name="name" type="text" placeholder="Enter your name" class="input-contacts-form inputOnboarding" autocomplete="off">
             <p class="add-text"></p>
           </div>
           <div class="input-wrapper">
             <label for="email" class="contacts-form-label name">E-mail*</label>
-            <input name="email" type="text" placeholder="Enter e-mail" class="input-contacts-form" autocomplete="off">
+            <input name="email" type="text" placeholder="Enter e-mail" class="input-contacts-form inputOnboarding" autocomplete="off">
             <p class="add-text"></p>
           </div>
           <div class="input-wrapper">
             <label for="phone" class="contacts-form-label name">Phone*</label>
-            <input name="phone" type="number" placeholder="Enter phone number" class="input-contacts-form" autocomplete="off">
+            <input name="phone" type="number" placeholder="Enter phone number" class="input-contacts-form inputOnboarding" autocomplete="off">
             <p class="add-text">We’ll call you ASAP or <a href="">Schedule a call</a> </p>
           </div>
           <div class="input-wrapper">
@@ -1191,7 +1206,7 @@
         <section class="project-team padding-block" >
           <div class="section__bg"><div class="section__bg__item"><div class="bg-item"></div></div><div class="section__bg__item"><div class="bg-item item-reverse"></div></div></div>
           <div class="section-container">
-            <!-- <p class="title-info title-margin title-margin">project team</p> -->
+            <p class="title-info title-margin title-margin">project team</p>
       
             <h2>This team will match your desires!</h2>
       
@@ -1343,7 +1358,61 @@
         </section>
 
         <section class="transformed">
-          
+          <div class="transformed-container">
+            
+            <div class="code-block bg-cases-img active" id="codeBlock">
+              <!-- <img src="/media/formstepper/logoVector.webp" alt="logo" class="backImg"> -->
+              <picture class="clip-path-image">
+                <source media="(min-width: 1440px)" srcset="/media/formstepper/Code-Example.webp" />
+                <source media="(min-width: 799px)" srcset="/media/formstepper/Code-Example.webp" />
+                <img src="/media/formstepper/Code-Example.webp" alt="code" />
+              </picture>
+            </div>
+            <div class="main-block">
+              <div class="title-block">
+                <div class="title-info-light">
+                  cases
+                </div>
+                <div class="header-wrapper">
+                  <h2>
+                    We transformed <b>this</b> to <b>that</b>
+                  </h2>
+                </div>
+
+
+              </div>
+              <img src="/media/formstepper/common-icons/arrow-img.svg"  class="show-arrow left active" alt="arrow">
+              <img src="/media/formstepper/common-icons/arrow-img-back.svg"  class="show-arrow right" alt="arrow back">
+              <div class="btn-block btn-desc">
+                <button class="btn-call-to-action">
+                  See portfolio
+
+                  <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.16663 16H25.8333" stroke="#2584F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16.5 6.66666L25.8333 16L16.5 25.3333" stroke="#2584F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+              <div class="cases-img-block bg-cases-img" id="casesImgBlock">
+                <picture class="clip-path-image">
+                  <source media="(min-width: 1440px)" srcset="/media/formstepper/ImagesEstimate.webp" />
+                  <source media="(min-width: 799px)" srcset="/media/formstepper/ImagesEstimate.webp" />
+                  <img src="/media/formstepper/ImagesEstimate.webp" alt="preview" />
+                </picture>
+              </div>
+
+              <div class="btn-block btn-mob">
+                <button class="btn-call-to-action">
+                  See portfolio
+
+                  <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.16663 16H25.8333" stroke="#2584F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16.5 6.66666L25.8333 16L16.5 25.3333" stroke="#2584F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+          </div>
         </section>
       </div>
     </div>
