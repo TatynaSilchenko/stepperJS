@@ -396,7 +396,7 @@ h2 {
   .checkbox {
     user-select: none;
     cursor: pointer;
-    padding: 6px 8px;
+    padding: 6px;
     border-radius: 6px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -923,7 +923,7 @@ a {
     gap: 8px;
     transition: all .2s ease-in-out;
     width: 95%;
-    max-width: 285px;
+    // max-width: 285px;
     margin: 0 auto;
     justify-content: center;
 
@@ -1118,7 +1118,7 @@ a {
 		display: flex;
         gap: 10px;
         align-items: center;
-        font: 16px/1.3 $fontFamilyMediumNew;
+        font: 16px/1.1 $fontFamilyMediumNew;
         color: $mainText;
 
         @media (min-width: 1440px) {
@@ -1163,6 +1163,7 @@ a {
         transition: 0.25s ease;
         position: relative;
         text-align: left;
+        height: 100%;
 
         @media (min-width: 1440px) {
             padding: 32px;
@@ -1192,9 +1193,15 @@ a {
 
 }
 
-#step6 label > span {
+#step6 label > span, #step8_4 label > span, #step8_5 label > span, #step8_6 label > span {
     align-items: flex-start;
 }
+#step8_1 label > span {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
 
 .radio-img {
     position: relative;
@@ -1416,7 +1423,6 @@ a {
         opacity: 1;
         width: 100%;
         transition: all .2s ease-out;
-        // transform: scale(1);
       }
     }
   
